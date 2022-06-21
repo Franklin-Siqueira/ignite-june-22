@@ -157,8 +157,8 @@ This sample code is released using the MIT license. For more information see the
 
 <div style="display: flex; align-items: flex-end; justify-content: flex-end; text-align: right;">
   <h3 style="margin-right: 10px">Franklin Siqueira | 2022</h3>
-  <a href="../../assets/img/favicons/favicon-32x32.png">
-    <img style="width: 32px; height: 32px; border-radius: 50%;" src="../../assets/img/favicons/favicon-32x32.png" width="32px" align="right">
+  <a href="../Ignite-June-22/event-platform/src/assets/img/favicons/favicon-16x16.png">
+    <img style="width: 32px; height: 32px; border-radius: 50%;" src="../Ignite-June-22/event-platform/src/assets/img/favicons/favicon-16x16.png" width="32px" align="right">
   </a>
 </div>
 
