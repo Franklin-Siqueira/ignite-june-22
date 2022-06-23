@@ -4,6 +4,7 @@
 import { gql, useQuery } from "@apollo/client"
 import { useEffect } from "react"
 import { client } from "./lib/apollo"
+import { Main } from "./pages/Main";
 
 // import { useState } from 'react'
 // import logo from './logo.svg'
@@ -61,7 +62,8 @@ function App() {
   console.log(data)
   return (
     <>
-      <h1 className="title-test">Hello Franklin! Loading...</h1>
+      {/* <h1 className="title-test">Hello Franklin! Loading...</h1> */}
+      <Main />
       <ul>
         { data?.lessons.map(lesson => {
           return <li key={ lesson.id }>{lesson.title}</li>

@@ -1,0 +1,86 @@
+/**
+ * Copyright 2022 Franklin Siqueira.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.lesson-card-main {
+  @apply flex;
+  @apply p-2;
+  /* @apply mt-1; */
+  /* @apply mb-1; */
+  @apply rounded;
+  /* @apply font-Roboto; */
+  /* @apply font-bold; */
+  /* @apply text-xl; */
+  /* @apply text-purple-400; */
+}
+
+.lesson-card-main:hover {
+  @apply bg-slate-800;
+}
+
+.lesson-details {
+  @apply rounded;
+  @apply border;
+  @apply border-gray-500;
+  @apply p-4;
+  @apply m-auto;
+}
+
+.lesson-date-time {
+  @apply flex;
+  @apply items-start;
+  @apply justify-between;
+  @apply text-sm;
+  @apply text-gray-300;
+  /* @apply text-right; */
+  @apply p-2;
+  @apply m-auto;
+}
+
+.lesson-date-time-icon {
+  @apply text-orange-400;
+}
+
+.lesson-header {
+  @apply flex;
+  @apply w-[260px];
+  @apply items-center;
+  @apply justify-between;
+}
+
+.lesson-status-available {
+  @apply flex;
+  @apply items-center;
+  @apply gap-2;
+  @apply text-sm;
+  @apply text-blue-500;
+  @apply font-medium;
+}
+
+.lesson-status-unavailable {
+  @apply flex;
+  @apply items-center;
+  @apply gap-2;
+  @apply text-sm;
+  @apply text-gray-500;
+  @apply font-medium;
+}
+
+.lesson-type {
+  @apply font-bold;
+  @apply text-xs;
+  @apply text-white;
+  /* @apply ml-10; */
+  @apply py-[0.125rem];
+  @apply px-2;
+  @apply border;
+  @apply border-green-300;
+  @apply rounded;
+}
+
+.lesson-brief {
+  @apply text-gray-200;
+  @apply mt-5;
+  @apply block;
+}

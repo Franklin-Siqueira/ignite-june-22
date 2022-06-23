@@ -45,16 +45,33 @@ O próximo passo é instalar as **ferramentas de desenvolvimento** citadas acima
 
 A flag **-p** é usada para criação do arquivo de configuração do **PostCSS**.
 
-Após a instalação, abrir o arquivo *tailwind.config.js* e adicionar o conteúdo indicado.
+Após a instalação, abra o arquivo *tailwind.config.js* e adicione o conteúdo disponibilizado [neste arquivo]().
 
-Feito isso, **remova** os arquivos *.css e .svg* da pasta */src*.
+Feito isso, **remova** os arquivos *.css e .svg* da pasta */src*, já que não serão usados.
 
-Finalmente, instlamos o *GraphQL* e o *Apollo client*.
+Para evitar a interrupção do processo de desenvolvimento e o vai-e-vem de instalação de dependências, é indispensável a instalação das bibliotecas [date-fns](https://www.npmjs.com/package/date-fns) e [Phosphor](https://www.npmjs.com/package/phosphor-icons), conforme segue abaixo:
+
+```shell
+// Phosphor
+> npm i phosphor-react
+// date-fns
+> npm i date-fns
+```
+
+No decorrer da criação do app as suas funcionalidades ficarão mais claras. De qualquer forma, caso a curiosidade seja inquietante, veja onde a Phosphor é usada [aqui]; e a date-fns [aqui].
+
+Finalmente, instalamos o *GraphQL* e o *Apollo client*.
 
 ```shell
 >...
 > npm i @apollo/client graphql
 ```
+
+Como o objetivo deste repositório é demonstrar as possibilidades inerentes à utilização do **ReactJs** e do **GraphQL** no desenvolvimento web, alguns detalhes ficam por conta da curiosidade de cada um. Partindo dessa premissa, as minúcias relativas à criação e a configuração da **API** do **GraphCMS** ficarão para uma outra oportunidade. Dessa forma, considerando que não há como chegar a algum resultado prático sem uma **API** configurada, é necessário o uso do modelo elaborado por [Diego Fernandes](https://github.com/diego3g), da [RocketSeat](https://github.com/rocketseat-education/), com o *link*  para *clonagem* disponibilizado em seguida:
+
+[Link para a API de tutorias](https://rseat.in/lab-graphcms)
+
+Tendo uma conta criada no **GraphCMS**, atribua um nome à sua escolha e uma descrição que ajude a entender o propósito da **API**.
 
 Não menos importante é instalar as **extensões** para essas ferramentas, caso esteja desenvolvendo no **VS Code**.
 
@@ -65,39 +82,84 @@ O *setup* inicial está concluído.
 
 **GraphQL Playground at GraphCMS**
 
-Clonar 
 
-```js
-query MyQuery {
-  lessons {
-    id
-    slug
-    title
-    teacher {
-      name
-      bio
-      avatarURL
-    }
-  }
-}
-// Returns
-{
-  "data": {
-    "lessons": [
-      {
-        "id": "cl4okwrf84hfx0blye3fr8sqa",
-        "slug": "instagram-clonning",
-        "title": "Instagram Clonning",
-        "teacher": {
-          "name": " Coding With Russ",
-          "bio": "GitHub and YouTube content creator",
-          "avatarURL": "https://avatars.githubusercontent.com/u/71890899?v=4"
+<details>
+  <summary>
+    <strong>
+      Criando uma query no GraphQL
+    </strong>
+  </summary>
+  <code>
+  
+    query MyQuery {
+      lessons {
+        id
+        slug
+        title
+        teacher {
+          name
+          bio
+          avatarURL
         }
       }
-    ]
-  }
-}
-```
+    }
+    // Returns
+    {
+      "data": {
+        "lessons": [
+          {
+            "id": "cl4okwrf84hfx0blye3fr8sqa",
+            "slug": "instagram-clonning",
+            "title": "Instagram Clonning",
+            "teacher": {
+              "name": " Coding With Russ",
+              "bio": "GitHub and YouTube content creator",
+              "avatarURL": "https://avatars.githubusercontent.com/u/71890899?v=4"
+            }
+          }
+        ]
+      }
+    }
+
+  </code>
+</details>
+
+Codificação da **Configuração das Cores Usadas** com o **Tailwind**:
+
+<details>
+  <summary>
+    <strong>Colors Definitions on Tailwind</strong>
+  </summary>
+  <code>
+  
+    colors: {
+      green: {
+        300: '#00B37E',
+        500: '#00875F',
+        700: '#015F43',
+      },
+      blue: {
+        500: '#81D8F7',
+      },
+      orange: {
+        500: '#FBA94C',
+      },
+      red: {
+        500: '#F75A68',
+      },
+      gray: {
+        100: '#E1E1E6',
+        200: '#C4C4CC',
+        300: '#8D8D99',
+        500: '#323238',
+        600: '#29292E',
+        700: '#121214',
+        900: '#09090A'
+      }
+    },
+
+  </code>
+</details>
 
 
 [Debug e Error Handling]()
@@ -155,11 +217,9 @@ This sample code is released using the MIT license. For more information see the
 
 ---
 
-<div style="display: flex; align-items: flex-end; justify-content: flex-end; text-align: right;">
-  <h3 style="margin-right: 10px">Franklin Siqueira | 2022</h3>
-  <a href="./event-platform/src/assets/img/favicons/favicon-16x16.png">
-    <img style="width: 32px; height: 32px; border-radius: 50%;" src="./event-platform/src/assets/img/favicons/favicon-16x16.png" width="32px" align="right">
-  </a>
-</div>
+<p align="center">
+	<img src="footer_ignite.svg" width="100%" alt="Header SVG" >
+  <img style="width: 32px; height: 32px; border-radius: 50%;" src="./event-platform/src/assets/img/favicons/favicon-16x16.png" width="16px" align="right">
+</p>
 
   ---

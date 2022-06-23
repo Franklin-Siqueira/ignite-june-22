@@ -1,0 +1,67 @@
+/**
+ * Copyright 2022 Franklin Siqueira.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+ /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+.header {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply border-b;
+  @apply border-gray-600;
+  @apply bg-zinc-800;
+  @apply w-full;
+  @apply h-9;
+  @apply py-5;
+}
+
+.header-left {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply pl-10; 
+}
+
+.header-right {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply pr-10; 
+}
+
+.header-center {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply p-10; 
+}
+
+.header-text-left {
+  @apply font-Roboto;
+  @apply font-thin;
+  @apply tracking-widest;
+  @apply text-orange-500;
+  @apply text-sm;
+  @apply ml-0;
+  @apply mt-2;
+}
+
+.header-text-center {
+  @apply font-Roboto;
+  @apply font-bold;
+  @apply text-yellow-600;
+  @apply text-xl;
+  @apply ml-0;
+  @apply mt-0;
+}
+
+.header-text-right {
+  @apply font-Roboto;
+  @apply font-bold;
+  @apply tracking-wider;
+  @apply text-violet-800;
+  @apply text-2xl;
+  @apply ml-0;
+  @apply mt-0;
+}
