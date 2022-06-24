@@ -1,0 +1,140 @@
+/**
+ * Copyright 2022 Franklin Siqueira.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.player-main {
+  @apply flex-1;
+}
+
+.video-base {
+  @apply flex;
+  @apply justify-center;
+  @apply bg-black;
+}
+
+.video-window {
+  @apply h-full;
+  @apply w-full;
+  @apply max-w-[1100px];
+  @apply max-h-[60vh];
+  @apply aspect-video;
+}
+
+.video-title-conteiner {
+  @apply p-8;
+  @apply max-w-[1100px];
+  @apply mx-auto;
+}
+
+.video-description-conteiner {
+  @apply flex;
+  @apply items-start;
+  @apply gap-16;
+}
+
+.video-text {
+  @apply flex-1;
+}
+
+.video-text h1 {
+  @apply text-2xl;
+  @apply font-bold;
+}
+
+.video-text p {
+  @apply mt-2;
+  @apply leading-relaxed;
+  @apply text-gray-300;
+}
+
+.video-buttons {
+  @apply flex;
+  @apply flex-col;
+  @apply gap-4;
+}
+
+.profile-card {
+  @apply flex;
+  @apply items-center;
+  @apply gap-4;
+  @apply mt-6;
+}
+
+.profile-card img {
+  @apply h-16;
+  @apply w-16;
+  @apply rounded-full;
+  @apply border-2;
+  @apply border-blue-500;
+}
+
+.profile-card-text {
+  @apply leading-relaxed;
+}
+
+.profile-card span {
+  @apply block;
+  @apply text-gray-200;
+  @apply text-sm;
+}
+
+.profile-card strong {
+  @apply block;
+  @apply font-bold;
+  @apply text-xl;
+}
+
+.wallpapers-conteiner {
+  @apply grid;
+  @apply grid-cols-2;
+  @apply gap-8;
+  @apply mt-20;
+}
+
+.wallpapers-conteiner a {
+  @apply flex;
+  @apply items-stretch;
+  @apply gap-6;
+  @apply rounded;
+  @apply bg-gray-700;
+  @apply overflow-hidden;
+  @apply transition-colors;
+}
+
+.wallpapers-conteiner a:hover {
+  @apply bg-gray-600;
+}
+
+.wallpaper-text-conteiner {
+  @apply py-6;
+  @apply leading-relaxed;
+}
+
+.wallpaper-left {
+  @apply flex;
+  @apply items-center;
+  @apply h-full;
+  @apply p-6;
+  @apply bg-green-700;
+}
+
+.wallpaper-center {
+}
+
+.wallpaper-center strong {
+  @apply text-2xl;
+}
+
+.wallpaper-center p {
+  @apply text-sm;
+  @apply text-gray-200;
+  @apply mt-2;
+}
+
+.wallpaper-right {
+  @apply flex;
+  @apply items-center;
+  @apply p-6;
+  @apply h-full;
+}

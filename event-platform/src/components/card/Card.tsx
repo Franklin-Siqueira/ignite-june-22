@@ -5,6 +5,7 @@ import { isPast, format } from "date-fns"
 import ptBR from "date-fns/locale/pt-BR"
 
 import { CalendarX, CheckCircle, Lock } from "phosphor-react"
+import { Link } from "react-router-dom";
 import "./../styles/card.css"
 
 interface LessonCardProps {
@@ -25,7 +26,8 @@ export const Card = (props: LessonCardProps) => {
     })
   return (
     <section className="lesson-card-main">
-      <a href="#">
+      {/* <a href="#"> */}
+      <Link to={`/main/lesson/${props.slug}`}>
         <span className="lesson-date-time">
           <span className="lesson-date-time-icon">
             <CalendarX size={24} />
@@ -52,7 +54,7 @@ export const Card = (props: LessonCardProps) => {
             {props.title}
           </strong>
         </section>
-      </a>
+        </Link>
     </section>
   )
 }

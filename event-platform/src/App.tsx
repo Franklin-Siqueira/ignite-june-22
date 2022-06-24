@@ -1,31 +1,35 @@
 // Copyright 2022 Franklin Siqueira.
 // SPDX-License-Identifier: Apache-2.0
 
-import { gql, useQuery } from "@apollo/client"
-import { useEffect } from "react"
-import { client } from "./lib/apollo"
+// import { gql, useQuery } from "@apollo/client"
+// import { useEffect } from "react"
+// import { client } from "./lib/apollo"
+import { ApolloProvider } from "@apollo/client";
+import { client } from './lib/apollo';
+import { Router } from "./Router";
 import { Main } from "./pages/Main";
+import { BrowserRouter } from "react-router-dom";
 
 // import { useState } from 'react'
 // import logo from './logo.svg'
 // import './App.css'
 
-const GET_LESSONS = gql`
-  query {
-          lessons {
-            id
-            slug
-            title
-            teacher {
-              name
-            }
-          }
-        }`
+// const GET_LESSONS = gql`
+//   query {
+//           lessons {
+//             id
+//             slug
+//             title
+//             teacher {
+//               name
+//             }
+//           }
+//         }`
 
-interface lesson {
-  id: string;
-  title: string;
-}
+// interface lesson {
+//   id: string;
+//   title: string;
+// }
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -58,17 +62,21 @@ function App() {
   // }, [])
 
   // Using useQuery hook
-  const { data } = useQuery<{ lessons: lesson[] }>(GET_LESSONS)
-  console.log(data)
+  // const { data } = useQuery<{ lessons: lesson[] }>(GET_LESSONS)
+  // console.log(data)
   return (
     <>
-      {/* <h1 className="title-test">Hello Franklin! Loading...</h1> */}
-      <Main />
-      <ul>
+      <ApolloProvider client={client}>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </ApolloProvider>
+      {/* <Main /> */}
+      {/* <ul>
         { data?.lessons.map(lesson => {
           return <li key={ lesson.id }>{lesson.title}</li>
         })}
-      </ul>
+      </ul> */}
     </>
   )
   // return (

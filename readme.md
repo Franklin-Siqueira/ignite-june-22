@@ -34,6 +34,14 @@ Em seguida:
 >...
 ```
 
+Como será visto, lá na frente, será preciso manipular endereços de vídeos. Ou seja, *roteamento*. Nesse particular, é necessária a instalação de um outro componente do **React**, que é o **react-router-dom**. Daí:
+
+```shell
+...
+> npm i react-router-dom  
+...
+```
+
 O próximo passo é instalar as **ferramentas de desenvolvimento** citadas acima:
 
 ```shell
@@ -58,7 +66,17 @@ Para evitar a interrupção do processo de desenvolvimento e o vai-e-vem de inst
 > npm i date-fns
 ```
 
-No decorrer da criação do app as suas funcionalidades ficarão mais claras. De qualquer forma, caso a curiosidade seja inquietante, veja onde a Phosphor é usada [aqui]; e a date-fns [aqui].
+No decorrer da criação do app as suas funcionalidades ficarão mais claras. De qualquer forma, caso a curiosidade seja inquietante, veja onde a **Phosphor** é usada [aqui](); e a **date-fns** [aqui]().
+
+Para que possam ser rodados vídeos, é necessária uma das bibliotecas disponíveis no mercado. Nesse exercício, o expert utiliza a biblioteca [Vime.Js](https://vimejs.com/).
+
+Conforme descrito no tutorial que levou à criação deste repo, pelo menos no momento em que se tentou instalar a biblioteca, houve problemas. Tais problemas foram contornados com a instalação a partir do comando a seguir:
+
+```shell
+...
+> npm i @vime/core @vime/react --force
+...
+```
 
 Finalmente, instalamos o *GraphQL* e o *Apollo client*.
 

@@ -1,0 +1,38 @@
+/**
+ * Copyright 2022 Franklin Siqueira.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+ .background-button-base {
+   @apply flex;
+   @apply items-center;
+   @apply justify-center;
+   @apply gap-2;
+   @apply p-4;
+   @apply rounded;
+   @apply text-sm;
+   @apply uppercase;
+   @apply font-bold;
+   @apply transition-colors;
+ }
+
+ .background-button {
+  @apply bg-green-500;
+}
+
+.clear-button {
+  @apply border;
+  @apply text-blue-400;
+  @apply border-green-500;
+}
+
+.background-button:hover {
+  @apply bg-green-300;
+}
+
+.clear-button:hover {
+  @apply bg-blue-300;
+  @apply text-gray-900;
+  /* @apply border-2;
+  @apply border-green-300; */
+}
