@@ -236,7 +236,9 @@ This sample code is released using the MIT license. For more information see the
 ---
 
 <p align="center">
-	<img src="footer_ignite.svg" width="100%" alt="Header SVG" >
+	<img src="footer_ignite.svg" width="100%" alt="Footer SVG" >
+</p>
+<p>
   <img style="width: 32px; height: 32px; border-radius: 50%;" src="./event-platform/src/assets/img/favicons/favicon-16x16.png" width="16px" align="right">
 </p>
 
