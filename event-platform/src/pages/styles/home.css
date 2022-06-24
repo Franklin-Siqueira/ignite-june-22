@@ -1,0 +1,193 @@
+/**
+ * Copyright 2022 Franklin Siqueira.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.main-container {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply min-h-screen;
+  @apply bg-blurred;
+  @apply bg-cover;
+  @apply bg-no-repeat;
+  @apply text-gray-200;
+}
+
+.main-container-header {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply border-b;
+  @apply border-gray-600;
+  /* @apply bg-zinc-800; */
+  @apply w-full;
+  @apply h-9;
+  @apply py-5;
+  @apply px-5;
+}
+
+.main-container-header-marca {
+  @apply flex;
+  @apply w-56;
+  @apply text-orange-400;
+}
+
+.main-container-header-marca p {
+  @apply font-Roboto;
+  @apply font-thin;
+  @apply tracking-widest;
+  @apply text-orange-500;
+  @apply text-sm;
+  @apply ml-0;
+  @apply mt-2;
+}
+
+.main-container-header-image {
+  @apply w-28;
+  @apply text-orange-400;
+}
+
+.main {
+  @apply flex;
+  /* @apply flex; */
+}
+
+.main-hero {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply w-full;
+  @apply max-w-[1100px];
+  @apply mt-14;
+  @apply mb-8;
+  @apply mx-auto;
+}
+
+.main-hero-left {
+  @apply flex-1;
+  @apply justify-between;
+  @apply px-4;
+  @apply py-4;
+  @apply mt-2;
+  @apply ml-2;
+  @apply mr-8;
+  @apply max-w-[640px];
+  /* @apply bg-slate-900; */
+}
+
+.main-hero-left img {
+  /* @apply mt-8; */
+  @apply w-48;
+  @apply ml-2;
+  @apply text-slate-300;
+}
+
+.main-hero-left h1 {
+  @apply mt-4;
+  @apply ml-2;
+  @apply font-Roboto;
+  @apply font-bold;
+  @apply text-[2.5rem];
+  @apply text-slate-400;
+  @apply leading-10;
+  @apply tracking-wide;
+  /* @apply backdrop-hue-rotate-180; */
+}
+
+.main-hero-left span {
+  @apply text-slate-100;
+
+}
+
+.main-hero-left p {
+  @apply text-slate-500;
+  @apply font-Roboto;
+  @apply font-thin;
+  @apply tracking-widest;
+  @apply text-sm;
+  @apply mt-2;
+  @apply ml-2;
+  @apply mb-4;
+  @apply mr-4;
+}
+
+.main-hero-right {
+  @apply max-w-[320px];
+  @apply px-10;
+  @apply py-10;
+  @apply mr-3;
+  @apply bg-gray-800;
+  @apply border;
+  @apply border-gray-500;
+  @apply rounded;
+  @apply opacity-75;
+}
+
+.main-hero-right span {  
+  @apply text-orange-500;
+}
+
+.main-hero-right h1 {
+  @apply font-Roboto;
+  @apply font-bold;
+  @apply tracking-widest;
+  @apply text-3xl;
+  @apply mb-2;
+  @apply opacity-100;
+  /* @apply block; */
+}
+
+.main-hero-right form {
+  @apply w-full;
+  @apply flex;
+  @apply flex-col;
+  @apply align-middle;
+  @apply justify-between;
+  @apply gap-2;
+  @apply block;
+}
+
+.main-hero-right form input {
+  @apply w-full;
+  @apply mt-4;
+  @apply h-14;
+  @apply bg-gray-900;
+  @apply rounded;
+  @apply font-Roboto;
+  @apply font-bold;
+  @apply tracking-widest;
+  @apply text-sm;
+  @apply placeholder:text-orange-500;
+  @apply placeholder:pl-6;
+}
+
+/* .main-hero-right form input::placeholder {
+  @apply text-orange-500;
+  @apply ml-10;
+  @apply placeholder:text-slate-400;
+} */
+
+.main-hero-right form button {
+  @apply w-full;
+  @apply mt-4;
+  @apply h-10;
+  @apply bg-orange-500;
+  @apply rounded;
+  @apply text-gray-900;
+  /* @apply text-orange-500; */
+  @apply font-Roboto;
+  @apply font-bold;
+  /* @apply tracking-widest; */
+  @apply text-2xl;
+  @apply drop-shadow-xl;
+}
+
+.main-hero-right form button:hover{
+  @apply bg-gray-900;
+  @apply text-orange-500;
+  @apply transition-colors;
+}
+.main-hero img {
+  @apply mt-10;
+}

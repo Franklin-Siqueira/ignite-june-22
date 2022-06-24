@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        blurred: 'url(/src/assets/img/pages/home/background-home-01.png)',
+      },
       fontFamily: {
         'Roboto': ['Roboto', 'sans-serif'] 
       },
