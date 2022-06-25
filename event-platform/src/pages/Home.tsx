@@ -2,19 +2,29 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // import { useState } from "react"
-import { gql, useMutation } from "@apollo/client"
+//
+//    Before CodeGen
+//
+// import { gql, useMutation } from "@apollo/client"
+//
+//    with CodeGen
+//
+import { useNewSubscriptionMutation } from "../graphql/generated"
+//
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import { Logo } from "../components/logo/Logo"
 import "./styles/home.css"
 
-const NEW_SUBSCRIPTION_MUTATION = gql`
-  mutation NewSubscription($name: String!, $email: String!) {
-  createSubscriber(data: {name: $name, email: $email}) {
-    id
-  }
-}
-`
+//
+//    Before CodeGen
+//
+// const NEW_SUBSCRIPTION_MUTATION = gql`
+//   mutation NewSubscription($name: String!, $email: String!) {
+//   createSubscriber(data: {name: $name, email: $email}) {
+//     id
+//   }
+// }`
 
 export const Home = () => {
   // const { slug } = useParams< { slug: string }>()
@@ -29,9 +39,14 @@ export const Home = () => {
   const [ email, setEmail ] = React.useState('')
   //
   const navigateTo = useNavigate()
-  
+  //
+  //    Before CodeGen
+  //
   // const [ newSubscription, { data }] = useMutation( NEW_SUBSCRIPTION_MUTATION )
-  const [ newSubscription, { loading } ] = useMutation( NEW_SUBSCRIPTION_MUTATION )
+  //
+  //    With CodeGen
+  //
+  const [ newSubscription, { loading } ] = useNewSubscriptionMutation()
   //
   const handleSubscribeForm = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -93,8 +108,4 @@ export const Home = () => {
       </div>
     </>
   )
-}
-
-function useNavigation() {
-  throw new Error("Function not implemented.")
 }
