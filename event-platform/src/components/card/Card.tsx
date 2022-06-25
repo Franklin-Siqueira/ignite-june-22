@@ -1,11 +1,11 @@
 // Copyright 2022 Franklin Siqueira.
 // SPDX-License-Identifier: Apache-2.0
 
+import { Link, useParams } from "react-router-dom";
+//
 import { isPast, format } from "date-fns"
 import ptBR from "date-fns/locale/pt-BR"
-
 import { CalendarX, CheckCircle, Lock } from "phosphor-react"
-import { Link } from "react-router-dom";
 import "./../styles/card.css"
 
 interface LessonCardProps {
@@ -17,6 +17,10 @@ interface LessonCardProps {
 }
 
 export const Card = (props: LessonCardProps) => {
+  //
+  const { slug } = useParams<{ slug: string}>()
+  const isActiveCard = slug === props.slug
+  //
   const isLessonAvailable = isPast(props.availableAt)
   const formattedAvailableAt = format(
     props.availableAt, 
@@ -25,7 +29,7 @@ export const Card = (props: LessonCardProps) => {
       locale: ptBR,
     })
   return (
-    <section className="lesson-card-main">
+    <section className={`lesson-card-main ${ isActiveCard ? 'lesson-card-active' : '' }`}>
       {/* <a href="#"> */}
       <Link to={`/main/lesson/${props.slug}`}>
         <span className="lesson-date-time">

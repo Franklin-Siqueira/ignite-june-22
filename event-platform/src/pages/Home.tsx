@@ -1,8 +1,20 @@
 // Copyright 2022 Franklin Siqueira.
 // SPDX-License-Identifier: Apache-2.0
 
+// import { useState } from "react"
+import { gql, useMutation } from "@apollo/client"
+import React from "react"
+import { useNavigate } from "react-router-dom"
 import { Logo } from "../components/logo/Logo"
 import "./styles/home.css"
+
+const NEW_SUBSCRIPTION_MUTATION = gql`
+  mutation NewSubscription($name: String!, $email: String!) {
+  createSubscriber(data: {name: $name, email: $email}) {
+    id
+  }
+}
+`
 
 export const Home = () => {
   // const { slug } = useParams< { slug: string }>()
@@ -12,9 +24,29 @@ export const Home = () => {
   const logoRocketAlt = 'Franklin Siqueira | RocketSeat | Ignite Lab | RocketSeat Logo'
   const logoIgnite = './src/assets/img/pages/home/Logo-igniteLab.png'
   const logoIgniteAlt = 'Franklin Siqueira | RocketSeat | Ignite Lab | Ignite Lab Logo'
+  //
+  const [ name, setName ] = React.useState('')
+  const [ email, setEmail ] = React.useState('')
+  //
+  const navigateTo = useNavigate()
+  
+  // const [ newSubscription, { data }] = useMutation( NEW_SUBSCRIPTION_MUTATION )
+  const [ newSubscription, { loading } ] = useMutation( NEW_SUBSCRIPTION_MUTATION )
+  //
+  const handleSubscribeForm = async (e: React.FormEvent) => {
+    e.preventDefault();
+    //
+    await newSubscription({
+      variables: {
+        name,
+        email,
+      }
+    })
+    navigateTo('/main')
+  }
   return (
     <>
-      <div className="main-container">
+      <div className="main-home-container">
         <div className="main-container-header">
           <div className="main-container-header-marca">
             <Logo />
@@ -24,7 +56,6 @@ export const Home = () => {
           <img className="main-container-header-image" src={logoRocket} alt={logoIgniteAlt} />
         </div>
         <main className="main">
-
           <div className="main-hero">
             {/* <h1>Home Subscribe LandPage</h1> */}
             <div className="main-hero-left">
@@ -38,22 +69,23 @@ export const Home = () => {
             </div>
             <div className="main-hero-right">
               <h1><span>Free</span> Subscription</h1>
-              <form action="">
+              <form onSubmit={handleSubscribeForm}>
                 <input 
                   type="text" 
                   placeholder="Your name..."
-                />
+                  onChange={ e => setName(e.target.value) }
+                  />
                 <input 
                   type="email" 
                   placeholder="And your e-mail."
+                  onChange={ e => setEmail(e.target.value) }
                 />
-                <button type="submit">
+                <button type="submit" disabled={ loading }>
                   Get Mine Now!
                 </button>
               </form>
             </div>
           </div>
-
         </main>
 
         <img src={codeImage} alt={codeImageAlt} />
@@ -61,4 +93,8 @@ export const Home = () => {
       </div>
     </>
   )
+}
+
+function useNavigation() {
+  throw new Error("Function not implemented.")
 }

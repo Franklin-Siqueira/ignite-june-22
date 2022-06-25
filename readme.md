@@ -78,14 +78,19 @@ Conforme descrito no tutorial que levou à criação deste repo, pelo menos no m
 ...
 ```
 
-Finalmente, instalamos o *GraphQL* e o *Apollo client*.
+Finalmente, instalamos o *GraphQL*, o *Apollo client* e o *GraphQL Code Generator* ([CodeGen](https://www.graphql-code-generator.com/docs/guides/react)), com as ferramentas necessárias para sua utilização.
 
 ```shell
 >...
 > npm i @apollo/client graphql
+>...
+> 
+> npm i @graphql-codegen/cli @graphql-codegen/typescript-react-query @graphql-codegen/typescript @graphql-codegen/typescript-operations @graphql-codegen/typescript-react-apollo -D
 ```
 
-Como o objetivo deste repositório é demonstrar as possibilidades inerentes à utilização do **ReactJs** e do **GraphQL** no desenvolvimento web, alguns detalhes ficam por conta da curiosidade de cada um. Partindo dessa premissa, as minúcias relativas à criação e a configuração da **API** do **GraphCMS** ficarão para uma outra oportunidade. Dessa forma, considerando que não há como chegar a algum resultado prático sem uma **API** configurada, é necessário o uso do modelo elaborado por [Diego Fernandes](https://github.com/diego3g), da [RocketSeat](https://github.com/rocketseat-education/), com o *link*  para *clonagem* disponibilizado em seguida:
+Vale observar que as ferramentas do **CodeGen** são instaladas com a **flag -D**. O uso da flag se explica pelo fato de que o **CodeGen** é uma ferramenta de *desenvolvimento*.
+
+Como o objetivo deste repositório é demonstrar as possibilidades inerentes à utilização do **ReactJs** e do **GraphQL** no desenvolvimento web, alguns detalhes ficam por conta da curiosidade de cada um. Partindo dessa premissa, as minúcias relativas à criação e a configuração da **API** do **GraphCMS** ficarão para uma outra oportunidade. Dessa forma, considerando que não há como chegar a algum resultado prático sem uma **API** configurada, é necessário o uso do modelo elaborado por [Diego Fernandes](https://github.com/diego3g), da [RocketSeat](https://github.com/rocketseat-education/), com o *link* para *clonagem* disponibilizado em seguida:
 
 [Link para a API de tutorias](https://rseat.in/lab-graphcms)
 
@@ -93,7 +98,7 @@ Tendo uma conta criada no **GraphCMS**, atribua um nome à sua escolha e uma des
 
 Não menos importante é instalar as **extensões** para essas ferramentas, caso esteja desenvolvendo no **VS Code**.
 
-O *setup* inicial está concluído.
+O ***setup*** inicial está concluído.
 
 ---
 ### **Atividades | Tasks**
@@ -104,7 +109,7 @@ O *setup* inicial está concluído.
 <details>
   <summary>
     <strong>
-      Criando uma query no GraphQL
+      GraphQL | Defining a <strong>query</strong>
     </strong>
   </summary>
   <code>
@@ -141,6 +146,49 @@ O *setup* inicial está concluído.
 
   </code>
 </details>
+
+<details>
+  <summary>
+    <strong>
+      GraphQL | Defining a <strong>mutation</strong>
+    </strong>
+  </summary>
+  <code>
+
+    mutation NewSubscriber($name: String!, $email: String!) {
+      createSubscriber(data: {name: $name, email: $email}) {
+        id
+      }
+    }
+
+    // Return if OKAY
+
+    {
+      "data": {
+        "createSubscriber": {
+          "id": "cl4t1xwckjvi70dkd6xpexize"
+        }
+      }
+    }
+
+    // Return if ERROR
+
+    {
+      "errors": [
+        {
+          "message": "value is not unique for the field \"email\""
+        }
+      ],
+      "data": null,
+      "extensions": {
+        "requestId": "cl4t37mfbk7ng0dkd0drylbo1"
+      }
+    }
+
+  </code>
+</details>
+
+---
 
 Codificação da **Configuração das Cores Usadas** com o **Tailwind**:
 

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-.main-container {
+.main-home-container {
   @apply flex;
   @apply flex-col;
   @apply items-center;
@@ -148,7 +148,7 @@
   @apply block;
 }
 
-.main-hero-right form input {
+.main-hero-right input {
   @apply w-full;
   @apply mt-4;
   @apply h-14;
@@ -158,17 +158,14 @@
   @apply font-bold;
   @apply tracking-widest;
   @apply text-sm;
-  @apply placeholder:text-orange-500;
-  @apply placeholder:pl-6;
 }
 
-/* .main-hero-right form input::placeholder {
+.main-hero-right input::placeholder {
   @apply text-orange-500;
-  @apply ml-10;
-  @apply placeholder:text-slate-400;
-} */
+  @apply pl-6;
+}
 
-.main-hero-right form button {
+.main-hero-right button {
   @apply w-full;
   @apply mt-4;
   @apply h-10;
@@ -180,10 +177,15 @@
   @apply font-bold;
   /* @apply tracking-widest; */
   @apply text-2xl;
-  @apply drop-shadow-xl;
+  /* @apply drop-shadow-xl; */
+  /* @apply drop-shadow-xl; */
 }
 
-.main-hero-right form button:hover{
+.main-hero-right button:disabled {
+  @apply opacity-50;
+}
+
+.main-hero-right button:hover{
   @apply bg-gray-900;
   @apply text-orange-500;
   @apply transition-colors;
