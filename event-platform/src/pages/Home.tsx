@@ -13,7 +13,14 @@ import { useNewSubscriptionMutation } from "../graphql/generated"
 //
 import React from "react"
 import { useNavigate } from "react-router-dom"
+//
 import { Logo } from "../components/logo/Logo"
+// const codeImage = './src/assets/img/pages/home/dev_screen.png'
+// const logoIgnite = './src/assets/img/pages/home/Logo-igniteLab.png'
+// const logoRocket = './src/assets/img/pages/home/Logo-rockeat.png'
+import codeImage from '../assets/img/pages/home/dev_screen.png'
+import logoIgnite from '../assets/img/pages/home/Logo-igniteLab.png'
+import logoRocket from '../assets/img/pages/home/Logo-rockeat.png'
 import "./styles/home.css"
 
 //
@@ -28,11 +35,8 @@ import "./styles/home.css"
 
 export const Home = () => {
   // const { slug } = useParams< { slug: string }>()
-  const codeImage = './src/assets/img/pages/home/dev_screen.png'
   const codeImageAlt = 'Franklin Siqueira | RocketSeat | Ignite Lab | Code Image'
-  const logoRocket = './src/assets/img/pages/home/Logo-rockeat.png'
   const logoRocketAlt = 'Franklin Siqueira | RocketSeat | Ignite Lab | RocketSeat Logo'
-  const logoIgnite = './src/assets/img/pages/home/Logo-igniteLab.png'
   const logoIgniteAlt = 'Franklin Siqueira | RocketSeat | Ignite Lab | Ignite Lab Logo'
   //
   const [ name, setName ] = React.useState('')

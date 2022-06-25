@@ -230,7 +230,7 @@ Codificação da **Configuração das Cores Usadas** com o **Tailwind**:
 
 [Debug e Error Handling]()
 
-[Live Preview](https://htmlpreview.github.io/?https://github.com/franklin-siqueira/Impulso-JavaScript-Evolution/blob/master/Módulo_II-Fundamentos_Web_com_HTML_e_CSS/Recriando_a_página_inicial_do_Instagram/Instagram/index.html)
+[Live Preview](https://rs-ignite-june22.vercel.app/)
 
 ---
 ### **Sobre este projeto | Project's stack**
