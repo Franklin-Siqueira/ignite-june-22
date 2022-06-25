@@ -65,3 +65,39 @@
   @apply ml-0;
   @apply mt-0;
 }
+/* 
+  Header from Home 
+*/
+.main-container-header {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply border-b;
+  @apply border-gray-600;
+  /* @apply bg-zinc-800; */
+  @apply w-full;
+  @apply h-9;
+  @apply py-5;
+  @apply px-5;
+}
+
+.main-container-header-marca a {
+  @apply flex;
+  @apply w-56;
+  @apply text-orange-400;
+}
+
+.main-container-header-marca p {
+  @apply font-Roboto;
+  @apply font-thin;
+  @apply tracking-widest;
+  @apply text-orange-500;
+  @apply text-sm;
+  @apply ml-0;
+  @apply mt-2;
+}
+
+.main-container-header-image {
+  @apply w-28;
+  @apply text-orange-400;
+}

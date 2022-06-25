@@ -27,7 +27,7 @@
   @apply px-5;
 }
 
-.main-container-header-marca {
+.main-container-header-marca a {
   @apply flex;
   @apply w-56;
   @apply text-orange-400;
@@ -59,7 +59,7 @@
   @apply justify-between;
   @apply w-full;
   @apply max-w-[1100px];
-  @apply mt-14;
+  @apply mt-9;
   @apply mb-8;
   @apply mx-auto;
 }
