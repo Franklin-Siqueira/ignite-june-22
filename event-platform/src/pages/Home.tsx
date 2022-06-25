@@ -65,7 +65,9 @@ export const Home = () => {
   }
   return (
     <>
+
       <div className="main-home-container">
+
         <div className="main-container-header">
           <div className="main-container-header-marca">
             <a href="https://github.com/franklin-siqueira">
@@ -78,6 +80,7 @@ export const Home = () => {
             <img className="main-container-header-image" src={logoRocket} alt={logoRocketAlt} />
           </a>
         </div>
+
         <main className="main">
           <div className="main-hero">
             {/* <h1>Home Subscribe LandPage</h1> */}
@@ -111,8 +114,38 @@ export const Home = () => {
           </div>
         </main>
 
-        <img src={codeImage} alt={codeImageAlt} />
+        {/* <img className="z-[-2] md:mt-[-20]" src={codeImage} alt={codeImageAlt} /> */}
 
+        {/* <div className="inline-block">
+
+          <div className="z-20
+                          max-w-md 
+                          mx-auto 
+                          bg-white 
+                          rounded-md 
+                          shadow-md 
+                          overflow-hidden 
+                          md:max-w-2xl"
+          >
+            <div className="md:flex">
+              <div className="md:shrink-0">
+                <img className="h-48 w-full object-cover md:h-full md:w-48" src={codeImage} alt={codeImageAlt} />
+              </div>
+              <div className="p-8">
+                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Case study</div>
+                <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
+                  Finding customers for your new business
+                </a>
+                <p className="mt-2 text-slate-500">
+                  Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> */}
+        <div className="z-[-1] md:relative md:bottom-[3.5rem] md:left-[2rem]">
+          <img src={codeImage} alt={codeImageAlt} />
+        </div>
       </div>
     </>
   )

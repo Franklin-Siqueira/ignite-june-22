@@ -3,6 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+ :root {
+  --theme-color: #52b3d0;
+  --fcs-button-bg-color: #52b3d9;
+ }
+
 .main-home-container {
   @apply flex;
   @apply flex-col;
@@ -29,7 +34,9 @@
 
 .main-container-header-marca a {
   @apply flex;
-  @apply w-56;
+  @apply lg:w-56;
+  @apply md:w-48;
+  @apply sm:w-32;
   @apply text-orange-400;
 }
 
@@ -44,7 +51,9 @@
 }
 
 .main-container-header-image {
-  @apply w-28;
+  @apply lg:w-28;
+  @apply md:w-24;
+  @apply sm:w-20;
   @apply text-orange-400;
 }
 
@@ -55,36 +64,57 @@
 
 .main-hero {
   @apply flex;
+  @apply flex-col;
   @apply items-center;
   @apply justify-between;
-  @apply w-full;
-  @apply max-w-[1100px];
-  @apply mt-9;
-  @apply mb-8;
   @apply mx-auto;
+  @apply pl-6;
+  @apply md:flex;
+  @apply md:flex-row;
+  @apply md:items-center;
+  @apply md:justify-between;
+  @apply md:w-full;
+  @apply md:max-w-[1100px];
+  @apply md:mt-9;
+  @apply md:mb-8;
+  @apply md:mx-auto;
+  /* @apply xl:flex-row;
+  @apply xl:flex-nowrap;
+  @apply md:max-w-[1280px];
+  @apply md:flex-col;
+  @apply md:flex-wrap; */
 }
 
 .main-hero-left {
-  @apply flex-1;
+  @apply flex;
+  @apply flex-col;
+  @apply flex-wrap;
+  @apply items-start;
   @apply justify-between;
-  @apply px-4;
-  @apply py-4;
-  @apply mt-2;
-  @apply ml-2;
-  @apply mr-8;
   @apply max-w-[640px];
+  @apply md:flex-1;
+  @apply md:justify-between;
+  @apply md:px-4;
+  @apply md:py-4;
+  @apply md:mt-2;
+  @apply md:ml-2;
+  @apply md:mr-6;
+  @apply md:max-w-[640px];
   /* @apply bg-slate-900; */
 }
 
 .main-hero-left img {
-  /* @apply mt-8; */
-  @apply w-48;
+  @apply md:mt-2;
+  @apply w-52;
   @apply ml-2;
-  @apply text-slate-300;
+  @apply mb-2;
+  @apply md:mb-1;
+  @apply md:w-48;
+  @apply md:ml-2;
 }
 
 .main-hero-left h1 {
-  @apply mt-4;
+  @apply md:mt-1;
   @apply ml-2;
   @apply font-Roboto;
   @apply font-bold;
@@ -113,15 +143,22 @@
 }
 
 .main-hero-right {
-  @apply max-w-[320px];
-  @apply px-10;
-  @apply py-10;
-  @apply mr-3;
+  @apply max-w-[480px];
+  @apply z-10;
+  @apply px-8;
+  @apply py-8;
+  @apply mr-6;
+  @apply mb-6;
   @apply bg-gray-800;
   @apply border;
   @apply border-gray-500;
-  @apply rounded;
-  @apply opacity-75;
+  @apply rounded-md;
+  @apply opacity-[0.85];
+  /* Desktop */
+  @apply md:max-w-[320px];
+  @apply md:px-10;
+  @apply md:py-10;
+  @apply md:mb-0;
 }
 
 .main-hero-right span {  

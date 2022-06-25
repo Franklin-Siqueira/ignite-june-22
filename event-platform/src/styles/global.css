@@ -7,11 +7,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Using PostCSS */
+/* 
+  Breakpoint prefix	Minimum width	CSS | Tailwind
+------------------------------------------------
+
+sm	640px	@media (min-width: 640px) { ... }
+md	768px	@media (min-width: 768px) { ... }
+lg	1024px	@media (min-width: 1024px) { ... }
+xl	1280px	@media (min-width: 1280px) { ... }
+2xl	1536px	@media (min-width: 1536px) { ... }
+
+<!-- Width of 16 by default, 32 on medium screens, and 48 on large screens -->
+
+              <img class="w-16 md:w-32 lg:w-48" src="...">
+
+*/
+
+/* 
+  Using PostCSS 
+*/
 body {
   @apply bg-gray-900 text-zinc-100;
   /* smoothing fonts */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .title-test {
   @apply text-5xl font-bold text-violet-700;
