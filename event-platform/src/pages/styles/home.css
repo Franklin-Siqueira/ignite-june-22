@@ -104,10 +104,13 @@
 }
 
 .main-hero-left img {
-  @apply md:mt-2;
-  @apply w-52;
+  @apply w-[11.7rem];
+  @apply max-w-[15rem];
   @apply ml-2;
   @apply mb-2;
+  @apply md:w-[2rem];
+  @apply md:max-w-[11.7rem];
+  @apply md:mt-2;
   @apply md:mb-1;
   @apply md:w-48;
   @apply md:ml-2;

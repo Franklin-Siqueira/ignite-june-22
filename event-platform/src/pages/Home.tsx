@@ -85,7 +85,7 @@ export const Home = () => {
           <div className="main-hero">
             {/* <h1>Home Subscribe LandPage</h1> */}
             <div className="main-hero-left">
-              <img className="main-container-header-image" src={logoIgnite} alt={logoIgniteAlt} />
+              <img src={logoIgnite} alt={logoIgniteAlt} />
               <h1>
                 Subscribe <span>Landing Page</span> at Ignite Lab | <span>ReactJs</span>
               </h1>
