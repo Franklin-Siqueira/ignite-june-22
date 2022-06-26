@@ -143,7 +143,7 @@ export const Home = () => {
             </div>
           </div>
         </div> */}
-        <div className="z-[-1] md:relative md:bottom-[3.5rem] md:left-[2rem]">
+        <div className="main-home-container-img-bottom">
           <img src={codeImage} alt={codeImageAlt} />
         </div>
       </div>

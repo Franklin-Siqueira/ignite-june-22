@@ -149,7 +149,11 @@
   @apply py-8;
   @apply mr-6;
   @apply mb-6;
-  @apply bg-gray-800;
+
+  @apply bg-gradient-to-r;
+  @apply from-gray-800;
+
+  /* @apply bg-gray-800; */
   @apply border;
   @apply border-gray-500;
   @apply rounded-md;
@@ -229,4 +233,14 @@
 }
 .main-hero img {
   @apply mt-10;
+}
+
+.main-home-container-img-bottom {
+  @apply z-[-1];
+  @apply relative;
+  @apply bottom-[4.75rem];
+  @apply left-[1rem];
+  @apply md:relative;
+  @apply md:bottom-[5.75rem];
+  @apply md:left-[2rem];
 }
