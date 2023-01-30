@@ -1,0 +1,21 @@
+# Copyright 2022 Franklin Siqueira.
+# SPDX-License-Identifier: Apache-2.0
+
+# schema: http://my-graphql-api.com/graphql
+schema: https://api-sa-east-1.graphcms.com/v2/cl4okcsxa0dob01xk9jfmguug/master
+# documents: './src/**/*.tsx'
+documents: './src/graphql/**/*.graphql'
+generates:
+  ./src/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+      # - typescript-react-query
+      # - typesd-document-node
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: false
+      withComponent: false
+      # fetcher: fetch
