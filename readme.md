@@ -271,7 +271,7 @@ Codificação da **Configuração das Cores Usadas** com o **Tailwind**:
 
 ---
 
-[![Awesome Badges](https://img.shields.io/static/v1?label=Badges'r&message=Awesome&color=blue)](https://github.com/franklin-siqueira)
+[![Awesome Badges](https://img.shields.io/static/v1?label=Badges'r&message=Awesome!!!&color=blue)](https://github.com/franklin-siqueira)
 
 ---
 

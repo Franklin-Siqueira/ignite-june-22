@@ -1,0 +1,249 @@
+/**
+ * Copyright 2022 Franklin Siqueira.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+ :root {
+  --theme-color: #52b3d0;
+  --fcs-button-bg-color: #52b3d9;
+ }
+
+.main-home-container {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply min-h-screen;
+  @apply bg-blurred;
+  @apply bg-cover;
+  @apply bg-no-repeat;
+  @apply text-gray-200;
+}
+
+.main-container-header {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply border-b;
+  @apply border-gray-600;
+  /* @apply bg-zinc-800; */
+  @apply w-full;
+  @apply h-9;
+  @apply py-5;
+  @apply px-5;
+}
+
+.main-container-header-marca a {
+  @apply flex;
+  @apply lg:w-56;
+  @apply md:w-48;
+  @apply sm:w-32;
+  @apply text-orange-400;
+}
+
+.main-container-header-marca p {
+  @apply font-Roboto;
+  @apply font-thin;
+  @apply tracking-widest;
+  @apply text-orange-500;
+  @apply text-sm;
+  @apply ml-0;
+  @apply mt-2;
+}
+
+.main-container-header-image {
+  @apply lg:w-28;
+  @apply md:w-24;
+  @apply sm:w-20;
+  @apply text-orange-400;
+}
+
+.main {
+  @apply flex;
+  /* @apply flex; */
+}
+
+.main-hero {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-between;
+  @apply mx-auto;
+  @apply pl-6;
+  @apply md:flex;
+  @apply md:flex-row;
+  @apply md:items-center;
+  @apply md:justify-between;
+  @apply md:w-full;
+  @apply md:max-w-[1100px];
+  @apply md:mt-9;
+  @apply md:mb-8;
+  @apply md:mx-auto;
+  /* @apply xl:flex-row;
+  @apply xl:flex-nowrap;
+  @apply md:max-w-[1280px];
+  @apply md:flex-col;
+  @apply md:flex-wrap; */
+}
+
+.main-hero-left {
+  @apply flex;
+  @apply flex-col;
+  @apply flex-wrap;
+  @apply items-start;
+  @apply justify-between;
+  @apply max-w-[640px];
+  @apply md:flex-1;
+  @apply md:justify-between;
+  @apply md:px-4;
+  @apply md:py-4;
+  @apply md:mt-2;
+  @apply md:ml-2;
+  @apply md:mr-6;
+  @apply md:max-w-[640px];
+  /* @apply bg-slate-900; */
+}
+
+.main-hero-left img {
+  @apply w-[11.7rem];
+  @apply max-w-[15rem];
+  @apply ml-2;
+  @apply mb-2;
+  @apply md:w-[2rem];
+  @apply md:max-w-[11.7rem];
+  @apply md:mt-2;
+  @apply md:mb-1;
+  @apply md:w-48;
+  @apply md:ml-2;
+}
+
+.main-hero-left h1 {
+  @apply md:mt-1;
+  @apply ml-2;
+  @apply font-Roboto;
+  @apply font-bold;
+  @apply text-[2.5rem];
+  @apply text-slate-400;
+  @apply leading-10;
+  @apply tracking-wide;
+  /* @apply backdrop-hue-rotate-180; */
+}
+
+.main-hero-left span {
+  @apply text-slate-100;
+
+}
+
+.main-hero-left p {
+  @apply text-slate-500;
+  @apply font-Roboto;
+  @apply font-thin;
+  @apply tracking-widest;
+  @apply text-sm;
+  @apply mt-2;
+  @apply ml-2;
+  @apply mb-4;
+  @apply mr-4;
+}
+
+.main-hero-right {
+  @apply max-w-[480px];
+  @apply z-10;
+  @apply px-8;
+  @apply py-8;
+  @apply mr-6;
+  @apply mb-6;
+
+  @apply bg-gradient-to-r;
+  @apply from-gray-800;
+
+  /* @apply bg-gray-800; */
+  @apply border;
+  @apply border-gray-500;
+  @apply rounded-md;
+  @apply opacity-[0.85];
+  /* Desktop */
+  @apply md:max-w-[320px];
+  @apply md:px-10;
+  @apply md:py-10;
+  @apply md:mb-0;
+}
+
+.main-hero-right span {  
+  @apply text-orange-500;
+}
+
+.main-hero-right h1 {
+  @apply font-Roboto;
+  @apply font-bold;
+  @apply tracking-widest;
+  @apply text-3xl;
+  @apply mb-2;
+  @apply opacity-100;
+  /* @apply block; */
+}
+
+.main-hero-right form {
+  @apply w-full;
+  @apply flex;
+  @apply flex-col;
+  @apply align-middle;
+  @apply justify-between;
+  @apply gap-2;
+  @apply block;
+}
+
+.main-hero-right input {
+  @apply w-full;
+  @apply mt-4;
+  @apply h-14;
+  @apply bg-gray-900;
+  @apply rounded;
+  @apply font-Roboto;
+  @apply font-bold;
+  @apply tracking-widest;
+  @apply text-sm;
+}
+
+.main-hero-right input::placeholder {
+  @apply text-orange-500;
+  @apply pl-6;
+}
+
+.main-hero-right button {
+  @apply w-full;
+  @apply mt-4;
+  @apply h-10;
+  @apply bg-orange-500;
+  @apply rounded;
+  @apply text-gray-900;
+  /* @apply text-orange-500; */
+  @apply font-Roboto;
+  @apply font-bold;
+  /* @apply tracking-widest; */
+  @apply text-2xl;
+  /* @apply drop-shadow-xl; */
+  /* @apply drop-shadow-xl; */
+}
+
+.main-hero-right button:disabled {
+  @apply opacity-50;
+}
+
+.main-hero-right button:hover{
+  @apply bg-gray-900;
+  @apply text-orange-500;
+  @apply transition-colors;
+}
+.main-hero img {
+  @apply mt-10;
+}
+
+.main-home-container-img-bottom {
+  @apply z-[-1];
+  @apply relative;
+  @apply bottom-[4.75rem];
+  @apply left-[1rem];
+  @apply md:relative;
+  @apply md:bottom-[5.75rem];
+  @apply md:left-[2rem];
+}

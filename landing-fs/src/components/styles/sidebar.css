@@ -1,0 +1,29 @@
+/**
+ * Copyright 2022 Franklin Siqueira.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.sidebar-main {
+  @apply w-[348px];
+  @apply p-6;
+  @apply border-l; 
+  @apply bg-gray-700;
+  @apply border-gray-600;
+}
+
+.sidebar-text-header {
+  @apply text-2xl;
+  @apply text-left;
+  @apply font-Roboto;
+  @apply font-bold;
+  @apply pb-4;
+  @apply border-b;
+  @apply border-gray-500;
+  @apply block;
+}
+
+.lesson-cards-section {
+  @apply flex;
+  @apply flex-col;
+  @apply gap-8;
+}
