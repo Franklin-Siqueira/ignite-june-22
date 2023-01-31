@@ -8,11 +8,25 @@
 
 Semana dedicada ao desenvolvimento, utilizando [Vite](https://www.npmjs.com/package/vite), [ReactJs](https://www.npmjs.com/package/react), [TypeScript](https://www.typescriptlang.org/), [GraphQL](https://www.npmjs.com/package/graphql) e [GraphCMS](https://graphcms.com/). Mais ainda, também são usados as ferramentas de desenvolvimento [Tailwind](https://www.npmjs.com/package/tailwindcss), [PostCSS](https://www.npmjs.com/package/postcss) e o [Autoprefixer](https://www.npmjs.com/package/autoprefixer).
 
-
 Caso não tenha instalados os requisitos acima, siga os procedimentos indicados nos links para cada um deles.
 
 ---
 ### **Inicialização | Basic Setup**
+
+Como utilizaremos frameworks baseados no **Node.Js**, inicialmente, vamos nos certificar das versões disponíveis no sistema em que estamos trabalhando:
+
+```bash
+# usando o nvm
+> nvm ls
+```
+
+Dependendo do provedor (**host**) que será usado para hospedagem do aplicativo, alguns ajustes podem ser necessários. É imprescindível consultar a documentação do provedor para garantir a instalação e funcionamento adequado do sistema.
+
+No caso, precisamos utilizar a versão do **Node.Js** suportada pelo provedor.
+
+Dependendo da versão suportada pelo provedor, pode ser necessária a instalação dessa versão no sistema em uso.
+
+Então, iniciaremos o setup da aplicação:
 
 ```shell
 > git init
@@ -68,17 +82,7 @@ Para evitar a interrupção do processo de desenvolvimento e o vai-e-vem de inst
 
 No decorrer da criação do app as suas funcionalidades ficarão mais claras. De qualquer forma, caso a curiosidade seja inquietante, veja onde a **Phosphor** é usada [aqui](); e a **date-fns** [aqui]().
 
-Para que possam ser rodados vídeos, é necessária uma das bibliotecas disponíveis no mercado. Nesse exercício, o expert utiliza a biblioteca [Vime.Js](https://vimejs.com/).
-
-Conforme descrito no tutorial que levou à criação deste repo, pelo menos no momento em que se tentou instalar a biblioteca, houve problemas. Tais problemas foram contornados com a instalação a partir do comando a seguir:
-
-```shell
-...
-> npm i @vime/core @vime/react --force
-...
-```
-
-Finalmente, instalamos o *GraphQL*, o *Apollo client* e o *GraphQL Code Generator* ([CodeGen](https://www.graphql-code-generator.com/docs/guides/react)), com as ferramentas necessárias para sua utilização.
+Prosseguindo, instalamos o *GraphQL*, o *Apollo client* e o *GraphQL Code Generator* ([CodeGen](https://www.graphql-code-generator.com/docs/guides/react)), com as ferramentas necessárias para sua utilização.
 
 ```shell
 >...
@@ -89,6 +93,16 @@ Finalmente, instalamos o *GraphQL*, o *Apollo client* e o *GraphQL Code Generato
 ```
 
 Vale observar que as ferramentas do **CodeGen** são instaladas com a **flag -D**. O uso da flag se explica pelo fato de que o **CodeGen** é uma ferramenta de *desenvolvimento*.
+
+Finalmente, para que possam ser rodados vídeos, é necessária uma das bibliotecas disponíveis no mercado. Nesse exercício, o expert utiliza a biblioteca [Vime.Js](https://vimejs.com/).
+
+Conforme descrito no tutorial que levou à criação deste repo, pelo menos no momento em que se tentou instalar a biblioteca, houve problemas. Tais problemas foram contornados com a instalação a partir do comando a seguir:
+
+```shell
+...
+> npm i @vime/core @vime/react --force
+...
+```
 
 Como o objetivo deste repositório é demonstrar as possibilidades inerentes à utilização do **ReactJs** e do **GraphQL** no desenvolvimento web, alguns detalhes ficam por conta da curiosidade de cada um. Partindo dessa premissa, as minúcias relativas à criação e a configuração da **API** do **GraphCMS** ficarão para uma outra oportunidade. Dessa forma, considerando que não há como chegar a algum resultado prático sem uma **API** configurada, é necessário o uso do modelo elaborado por [Diego Fernandes](https://github.com/diego3g), da [RocketSeat](https://github.com/rocketseat-education/), com o *link* para *clonagem* disponibilizado em seguida:
 
