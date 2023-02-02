@@ -13,6 +13,8 @@ module.exports = {
       backgroundImage: {
         blurred: 'url(/src/assets/img/pages/home/background-home-01.png)',
       },
+      //   blurred: 'url(/src/assets/img/pages/home/comp-miriam-m-carrilho-web-4.png)',
+      // },
       fontFamily: {
         'Roboto': ['Roboto', 'sans-serif'] 
       },

@@ -163,8 +163,8 @@
   @apply opacity-[0.85];
   /* Desktop */
   @apply md:max-w-[320px];
-  @apply md:px-10;
-  @apply md:py-10;
+  @apply md:px-8;
+  @apply md:py-8;
   @apply md:mb-0;
 }
 
@@ -195,7 +195,7 @@
 .main-hero-right input {
   @apply w-full;
   @apply mt-4;
-  @apply h-14;
+  @apply h-12;
   @apply bg-gray-900;
   @apply rounded;
   @apply font-Roboto;
@@ -206,7 +206,11 @@
 
 .main-hero-right input::placeholder {
   @apply text-orange-500;
-  @apply pl-6;
+  @apply pl-2;
+  @apply ml-1;
+  @apply md:px-12;
+  @apply lg:pl-12;
+  @apply lg:ml-4;
 }
 
 .main-hero-right button {
@@ -245,5 +249,5 @@
   @apply left-[1rem];
   @apply md:relative;
   @apply md:bottom-[5.75rem];
-  @apply md:left-[2rem];
+  /* @apply md:left-[.005rem]; */
 }

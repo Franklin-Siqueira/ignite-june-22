@@ -14,14 +14,15 @@ import { useNewSubscriptionMutation } from "../graphql/generated"
 import React from "react"
 import { useNavigate } from "react-router-dom"
 //
+import "./styles/home.css"
 import { Logo } from "../components/logo/Logo"
 // const codeImage = './src/assets/img/pages/home/dev_screen.png'
 // const logoIgnite = './src/assets/img/pages/home/Logo-igniteLab.png'
 // const logoRocket = './src/assets/img/pages/home/Logo-rockeat.png'
+import { RadixButton } from "../components/button/radixButton"
 import codeImage from '../assets/img/pages/home/dev_screen.png'
-import logoIgnite from '../assets/img/pages/home/Logo-igniteLab.png'
 import logoRocket from '../assets/img/pages/home/Logo-rockeat.png'
-import "./styles/home.css"
+import logoIgnite from '../assets/img/pages/home/Logo-igniteLab.png'
 
 //
 //    Before CodeGen
@@ -63,22 +64,29 @@ export const Home = () => {
     })
     navigateTo('/main')
   }
+  // Current year
+  const currentYear = new Date().getFullYear()
+  //
   return (
     <>
 
       <div className="main-home-container">
 
         <div className="main-container-header">
+          {/* // */}
           <div className="main-container-header-marca">
             <a href="https://github.com/franklin-siqueira">
               <Logo />
-              <p>Franklin Siqueira | 2022</p>
+              <p>FCS.Consult | {currentYear}</p>
             </a>
           </div>
+          {/* // */}
           <img className="main-container-header-image" src={logoIgnite} alt={logoIgniteAlt} />
-          <a href="https://rocketseat.com.br">
+          {/* // */}
+          {/* <a href="https://rocketseat.com.br">
             <img className="main-container-header-image" src={logoRocket} alt={logoRocketAlt} />
-          </a>
+          </a> */}
+          {/* // */}
         </div>
 
         <main className="main">
@@ -103,7 +111,7 @@ export const Home = () => {
                 />
                 <input
                   type="email"
-                  placeholder="And your e-mail."
+                  placeholder="And your e-mail"
                   onChange={e => setEmail(e.target.value)}
                 />
                 <button type="submit" disabled={loading}>
@@ -111,6 +119,11 @@ export const Home = () => {
                 </button>
               </form>
             </div>
+            {/* Testing Radix Slot lib */}
+            {/* <RadixButton>Create Account</RadixButton>
+            <RadixButton asChild>
+              <a href="">Create Account</a>
+            </RadixButton> */}
           </div>
         </main>
 

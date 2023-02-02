@@ -20,11 +20,37 @@ Como utilizaremos frameworks baseados no **Node.Js**, inicialmente, vamos nos ce
 > nvm ls
 ```
 
+Caso **não tenha instalado o nvm** na máquina em uso:
+
+```bash
+# instalação do nvm
+> brew install nvm
+```
+
 Dependendo do provedor (**host**) que será usado para hospedagem do aplicativo, alguns ajustes podem ser necessários. É imprescindível consultar a documentação do provedor para garantir a instalação e funcionamento adequado do sistema.
 
 No caso, precisamos utilizar a versão do **Node.Js** suportada pelo provedor.
 
 Dependendo da versão suportada pelo provedor, pode ser necessária a instalação dessa versão no sistema em uso.
+
+```bash
+# instala a versão do Node utilizada no Cloudflare
+# (em 01/2023)
+> nvm install 16.4.0
+```
+
+Terminada a instalação, usaremos a versão instalada para desnvolver o aplicativo:
+
+```bash
+# seleciona a versão do Node
+> nvm use 16.4.0
+```
+
+No caso específico do Cloudflare, crie o arquivo .nvmrc na pasta raiz do projeto`, com uma linha apenas:
+
+```shell
+16.4.0
+```
 
 Então, iniciaremos o setup da aplicação:
 
